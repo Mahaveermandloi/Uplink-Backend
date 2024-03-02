@@ -1,0 +1,5 @@
+package com.linkup.models;
+
+public class Chat {
+
+}

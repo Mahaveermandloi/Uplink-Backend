@@ -1,0 +1,13 @@
+package com.linkup.service;
+
+import com.linkup.models.*;
+
+public interface UserService {
+
+	public User registerUser(User user);
+	
+	
+	
+	
+	
+}

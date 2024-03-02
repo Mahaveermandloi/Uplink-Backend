@@ -1,0 +1,9 @@
+package com.linkup.service;
+
+public class MessageService {
+
+	public Message createMessage(Integer userId , Integer chatId ,Chat chat );
+	
+	
+	
+}

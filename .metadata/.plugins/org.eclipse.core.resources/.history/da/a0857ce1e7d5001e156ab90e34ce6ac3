@@ -1,0 +1,19 @@
+package com.linkup.models;
+
+import javax.annotation.Generated;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class Chat {
+
+	@Id
+	@Generated(strategy = GeneterionType.AUTO)
+	
+}

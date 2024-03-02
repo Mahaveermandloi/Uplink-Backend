@@ -1,0 +1,22 @@
+package com.linkup.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.linkup.models.Post;
+
+public interface PostRepository extends JpaRepository<Post, Integer> {
+
+	@Query("select p from ")
+	List<Post> findPostByUserId(Integer userId);
+
+	Post findPostById(Integer postId);
+
+	List<Post> findAllPost();
+
+	Post savedPost(Integer postId, Integer userId);
+
+	Post likePost(Integer postId, Integer userId);
+
+}

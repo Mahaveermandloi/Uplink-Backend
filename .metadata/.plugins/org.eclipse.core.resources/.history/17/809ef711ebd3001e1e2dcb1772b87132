@@ -1,0 +1,10 @@
+package com.linkup.service;
+
+
+public interface PostService {
+
+	Post creatNewPost(Post post) {
+		
+	}
+	
+}

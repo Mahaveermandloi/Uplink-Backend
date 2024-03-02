@@ -1,0 +1,6 @@
+package com.linkup.models;
+
+@Entity
+public class Reels {
+
+}

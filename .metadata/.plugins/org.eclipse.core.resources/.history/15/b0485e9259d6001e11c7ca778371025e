@@ -1,0 +1,10 @@
+package com.linkup.exceptions;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
+public class GlobalExceptions {
+
+	public ResponseEntity<ErrorDetails> otherExceptionHandler(GlobalExceptions ue, )
+	
+}

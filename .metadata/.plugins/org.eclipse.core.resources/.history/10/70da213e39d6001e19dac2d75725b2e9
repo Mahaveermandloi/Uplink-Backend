@@ -1,0 +1,23 @@
+package com.linkup.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.linkup.models.Chat;
+import com.linkup.request.CreateChatRequest;
+import com.linkup.service.ChatService;
+
+@RestController
+public class ChatController {
+
+	private ChatService chatService;
+
+	public Chat createChat(@RequestBody CreateChatRequest req) {
+
+		Chat chat = chatService.createChat(req.getReqUser() , req.getUser2());
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.linkup.request;
+
+import lombok.Data;
+
+@Data
+public class CreateChatRequest {
+
+	private User reqUser;
+	
+	
+	private C
+	
+}

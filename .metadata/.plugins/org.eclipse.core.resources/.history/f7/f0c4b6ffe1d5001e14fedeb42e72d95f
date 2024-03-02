@@ -1,0 +1,12 @@
+package com.linkup.service;
+
+public interface ReelsService {
+
+	public Reels createReel(Reels reel ,User user);
+
+	public List<Reels> findAllReels();
+	
+	public List<Reels> findUser
+	
+	
+}

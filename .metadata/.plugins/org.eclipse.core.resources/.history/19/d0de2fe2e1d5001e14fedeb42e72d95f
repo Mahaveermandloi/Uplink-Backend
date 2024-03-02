@@ -1,0 +1,7 @@
+package com.linkup.service;
+
+public interface ReelsService {
+
+	
+	
+}

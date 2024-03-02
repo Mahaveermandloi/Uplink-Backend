@@ -1,0 +1,10 @@
+package com.linkup.service;
+
+public interface ChatService {
+
+	
+	public Chat createChat(User reqUser, User user2);
+	
+	
+	
+}

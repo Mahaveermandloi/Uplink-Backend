@@ -1,0 +1,15 @@
+package com.linkup.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.linkup.models.User;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+
+	
+	public User findByEmail(String email);
+	
+	public List<User> search
+	
+	
+}

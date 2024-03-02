@@ -1,0 +1,30 @@
+package com.linkup.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.linkup.models.Comment;
+import com.linkup.service.CommentService;
+import com.linkup.service.UserService;
+
+@RestController
+public class CommentController {
+
+	
+	@Autowired
+	private 
+	@Autowired
+	private CommentService commentService;
+
+	public Comment createComment(@RequestBody Comment comment, @RequestHeader("Authorization") String jwt) {
+
+		User user = 
+		
+		
+		return null;
+
+	}
+
+}

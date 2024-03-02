@@ -1,0 +1,19 @@
+package com.linkup.service;
+
+import java.util.List;
+
+import com.linkup.models.Chat;
+import com.linkup.models.User;
+
+public interface ChatService {
+
+	public Chat createChat(User reqUser, User user2);
+
+	public Chat findChatById(Integer chatId);
+
+	public List<Chat> findUsersChat(Integer userId);
+
+	
+	
+	
+}

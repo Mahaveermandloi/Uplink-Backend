@@ -1,0 +1,13 @@
+package com.linkup.service;
+
+public interface CommentService {
+
+	public Comment createComment(Comments comment, Integer postId, Integer userId);
+
+	public Comment
+	
+	
+	public Comments likeComment(Integer CommentId , Integer userId);
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.linkup.request;
+
+public class CreateChatRequest {
+
+}

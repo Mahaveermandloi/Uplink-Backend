@@ -1,0 +1,43 @@
+package com.linkup.config;
+
+import java.util.Date; // Import java.util.Date instead of java.sql.Date
+
+import javax.crypto.SecretKey;
+
+import org.springframework.security.core.Authentication;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+
+public class JwtProvider {
+
+    private SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
+
+    public String generateToken(Authentication auth) {
+        String jwt = Jwts.builder()
+                .setIssuer("Mahaveer")
+                .setIssuedAt(new Date()) // Use java.util.Date instead of java.sql.Date
+                .setExpiration(new Date(System.currentTimeMillis() + 86400000)) // Set expiration using current time
+                .claim("email", auth.getName())
+                .signWith(key)
+                .compact();
+        return jwt;
+    }
+
+    public static String getEmailFromJwtToken(String jwt) {
+        // Bearer Token
+        jwt = jwt.substring(7);
+
+        SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes()); // Move key declaration here
+
+        // Parse the JWT token
+        Jws<Claims> claims = Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(jwt);
+        String email = String.valueOf(claims.get("email"));
+
+        return email;
+    }
+}

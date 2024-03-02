@@ -1,0 +1,15 @@
+package com.linkup.exceptions;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+
+public class ErrorDetails {
+
+	private String message;
+	private String error;
+	private LocalDateTime timestamp;
+
+}

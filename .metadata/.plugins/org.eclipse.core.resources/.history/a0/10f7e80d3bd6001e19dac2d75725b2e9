@@ -1,0 +1,7 @@
+package com.linkup.models;
+
+
+@
+public class Message {
+
+}

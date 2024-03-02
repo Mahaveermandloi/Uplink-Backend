@@ -1,0 +1,19 @@
+package com.linkup.service;
+
+import com.linkup.models.*;
+
+public interface UserService {
+
+	public User registerUser(User user);
+	
+	
+	public User findUserById(Integer userId);
+	
+	
+	public User findUserByEmail(String email);
+	
+	
+	public User follow
+	
+	
+}

@@ -1,0 +1,43 @@
+package com.linkup.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.linkup.models.Chat;
+import com.linkup.models.User;
+import com.linkup.repository.ChatRepository;
+
+@Service
+public class ChatServiceImplementation implements ChatService {
+
+	@Autowired
+	ChatRepository chatRepository;
+	
+	
+	
+	@Override
+	public Chat createChat(User reqUser, User user2) {
+		
+		Chat isExist = ChatRepository.
+		
+		return null;
+	}
+
+	@Override
+	public Chat findChatById(Integer chatId) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Chat> findUsersChat(Integer userId) {
+		
+		return null;
+	}
+
+	
+	
+	
+}

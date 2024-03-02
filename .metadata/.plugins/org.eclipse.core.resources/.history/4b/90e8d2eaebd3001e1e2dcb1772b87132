@@ -1,0 +1,15 @@
+package com.linkup.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.linkup.models.Post;
+
+public interface postRepository extends JpaRepository<Post, Integer> {
+
+	Post createNewPost(Post post, Integer userId) throws Exception;
+
+	String deletePost(Integer postId ,Integer userId);
+	
+	
+	
+}

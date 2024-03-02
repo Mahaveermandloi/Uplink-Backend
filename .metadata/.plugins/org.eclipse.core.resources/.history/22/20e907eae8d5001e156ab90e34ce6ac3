@@ -1,0 +1,11 @@
+package com.linkup.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ChatServiceImplementation implements ChatService {
+
+	
+	
+	
+}

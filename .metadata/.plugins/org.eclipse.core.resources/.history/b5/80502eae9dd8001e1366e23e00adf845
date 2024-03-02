@@ -1,0 +1,17 @@
+package com.linkup;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@SpringBootApplication
+@EntityScan("com.linkup.models")
+@EnableJpaRepositories("com.linkup.repository")
+public class SocialLinkupApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SocialLinkupApplication.class, args);
+	}
+
+}

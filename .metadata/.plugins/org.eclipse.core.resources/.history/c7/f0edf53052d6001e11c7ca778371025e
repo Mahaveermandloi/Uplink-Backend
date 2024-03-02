@@ -1,0 +1,48 @@
+package com.linkup.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.linkup.models.Chat;
+import com.linkup.models.Message;
+import com.linkup.models.User;
+import com.linkup.repository.MessageRepository;
+
+@Service
+public class MessageServiceImplementation implements MessageService {
+
+	@Autowired
+	private MessageRepository messageRepository;
+
+	@Autowired
+	private ChatService chatService;
+
+	@Override
+	public Message createMessage(User user, Integer chatId, Message req) throws  Exception {
+	
+		Message message = new Message();
+		
+		Chat chat = chatService.findChatById(chatId);
+		
+		
+		
+		message.setChat(null);
+		message.setContent(req.getContent());
+		message.setImage(req.getImage());
+		message.setUser(user);
+		message.setTimestamp(LocalDateTime.now());
+		
+		
+		return null;
+	}
+
+	@Override
+	public List<Message> findChatMessages(Integer chatId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

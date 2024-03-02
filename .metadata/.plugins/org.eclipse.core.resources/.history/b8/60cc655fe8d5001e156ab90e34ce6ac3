@@ -1,0 +1,5 @@
+package com.linkup.repository;
+
+public interface ChatRepository extends JpaRepo {
+
+}

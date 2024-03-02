@@ -1,0 +1,15 @@
+package com.linkup.service;
+
+import com.linkup.models.Comment;
+
+public interface CommentService {
+
+	public Comment createComment(Comment comment, Integer postId, Integer userId);
+
+	public Comment findComment
+	
+	
+	public Comment likeComment(Integer CommentId , Integer userId);
+	
+	
+}

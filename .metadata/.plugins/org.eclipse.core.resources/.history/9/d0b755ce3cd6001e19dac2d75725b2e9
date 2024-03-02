@@ -1,0 +1,9 @@
+package com.linkup.service;
+
+public class MessageServiceImplementation implements MessageService {
+
+	private MessageRepository messageRepository;
+	
+	
+	
+}

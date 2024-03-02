@@ -1,0 +1,19 @@
+package com.linkup.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.linkup.service.ReelsService;
+
+@RestController
+public class ReelsController {
+	@Autowired
+	private ReelsService reelsService;
+
+	public Reels createReels(@RequestBody Reels reel) {
+		Reels createdReels = reelsService.createReel(null, null);
+
+	}
+
+}

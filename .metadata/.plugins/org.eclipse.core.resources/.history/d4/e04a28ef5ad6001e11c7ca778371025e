@@ -1,0 +1,21 @@
+package com.linkup.exceptions;
+
+import java.time.LocalDateTime;
+
+import lombok.Data;
+//import lombok.NoArgsConstructor;
+//import lombok.AllArgsConstructor;
+
+@Data
+public class ErrorDetails {
+
+	public ErrorDetails(String message2, String description, LocalDateTime now) {
+		// TODO Auto-generated constructor stub
+	}
+	private String message;
+	private String error;
+	private LocalDateTime timestamp;
+
+	
+	
+}

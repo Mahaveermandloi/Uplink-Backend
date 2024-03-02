@@ -1,0 +1,12 @@
+package com.linkup.models;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Reels {
+
+	@Id
+	
+	private Long id;
+	
+}

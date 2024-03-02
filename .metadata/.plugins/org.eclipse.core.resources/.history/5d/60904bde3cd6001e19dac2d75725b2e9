@@ -1,0 +1,29 @@
+package com.linkup.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.linkup.models.Chat;
+import com.linkup.models.Message;
+
+@Service
+public class MessageServiceImplementation implements MessageService {
+
+	@Autowired
+	private MessageRepository messageRepository;
+
+	@Override
+	public Message createMessage(Integer userId, Integer chatId, Chat chat) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Message> findChatMessages(Integer chatId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

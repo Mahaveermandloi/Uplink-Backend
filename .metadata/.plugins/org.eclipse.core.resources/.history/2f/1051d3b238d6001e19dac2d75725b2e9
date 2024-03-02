@@ -1,0 +1,15 @@
+package com.linkup.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.linkup.service.ChatService;
+
+@RestController
+public class ChatController {
+
+	
+	private ChatService chatService;
+	
+	
+	
+}

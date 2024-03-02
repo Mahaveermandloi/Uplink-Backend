@@ -1,0 +1,45 @@
+package com.linkup.config;
+
+import java.io.IOException;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+public class JwtValidator extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+
+        String jwt = request.getHeader(JwtConstant.JWT_HEADER);
+
+        if (jwt != null) {
+            try {
+                String email = JwtProvider.getEmailFromJwtToken(jwt, null);
+
+                // Create an empty list of authorities for now
+                // You might want to retrieve authorities from JWT claims in a real scenario
+                // List<GrantedAuthority> authorities = new ArrayList<>();
+
+                // Authentication object with just the email and no authorities
+                UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, null);
+
+                // Set the authentication object in SecurityContextHolder
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+
+            } catch (Exception e) {
+                // Handle exception as per your requirement
+                // For now, let's just print the stack trace
+                e.printStackTrace();
+            }
+        }
+
+        // Continue the filter chain
+        filterChain.doFilter(request, response);
+    }
+}

@@ -1,0 +1,7 @@
+package com.linkup.exceptions;
+
+public class UserException extends Exception {
+
+	public 
+	
+}

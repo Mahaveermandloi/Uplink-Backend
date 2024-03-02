@@ -1,0 +1,8 @@
+package com.linkup.repository;
+
+public interface ChatRepository extends JpaRepository<Chat, Integer> {
+
+	
+	public List<Chat> findByUserId(Integer userId
+	
+}

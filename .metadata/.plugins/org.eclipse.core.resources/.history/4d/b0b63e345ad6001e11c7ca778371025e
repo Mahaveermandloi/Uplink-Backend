@@ -1,0 +1,19 @@
+package com.linkup.exceptions;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
+
+@ControllerAdvice
+public class GlobalExceptions {
+
+	public ResponseEntity<ErrorDetails> otherExceptionHandler(GlobalExceptions ue, WebRequest req){
+		
+		ErrorDetails error = new ErrorDetails(ue.getMessage() , req.getDescription(false) , LocalD);
+		
+		
+		return null;
+	}
+
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.linkup.response;
+
+public class ApiResponse {
+
+}

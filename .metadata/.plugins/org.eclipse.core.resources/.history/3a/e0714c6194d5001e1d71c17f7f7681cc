@@ -1,0 +1,10 @@
+package com.linkup.models;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Comment {
+
+	
+	
+}

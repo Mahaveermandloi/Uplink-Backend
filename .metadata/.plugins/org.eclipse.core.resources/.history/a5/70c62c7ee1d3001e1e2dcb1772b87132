@@ -1,0 +1,8 @@
+package com.linkup.service;
+
+public interface UserService {
+
+	public User registerUser(User user);
+	
+	
+}

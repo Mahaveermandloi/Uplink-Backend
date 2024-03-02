@@ -1,0 +1,12 @@
+package com.linkup.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.linkup.models.Reels;
+
+public interface ReelsRepository extends JpaRepository<Reels, Integer>  {
+
+	public List<Reels> findByUserId(Integer userId);
+	
+	
+}

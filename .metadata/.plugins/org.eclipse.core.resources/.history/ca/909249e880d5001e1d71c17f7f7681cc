@@ -1,0 +1,5 @@
+package com.linkup.config;
+
+public class JwtValidator {
+
+}

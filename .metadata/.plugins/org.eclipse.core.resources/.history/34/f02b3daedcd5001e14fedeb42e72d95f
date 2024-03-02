@@ -1,0 +1,14 @@
+package com.linkup.repository;
+
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+
+import com.linkup.models.Comment;
+
+public class CommentRepository extends JpaRepository<Comment, Integer> {
+
+	public Comment save(Comment comment) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

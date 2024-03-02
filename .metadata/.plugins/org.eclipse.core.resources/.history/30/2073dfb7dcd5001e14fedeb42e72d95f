@@ -1,0 +1,23 @@
+package com.linkup.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+
+import com.linkup.models.Comment;
+
+public class CommentRepository extends JpaRepository<Comment, Integer> {
+
+	
+	// Ye JPA repos
+	public Comment save(Comment comment) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Optional<Comment> findById(Integer commentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
